@@ -74,3 +74,20 @@ Stack* reverceStack(Stack* top) {
   }
   return tmp;
 }
+
+Stack* CopyStack(Stack* top) {
+
+  Stack* tmp = NULL;
+  Stack* res;
+
+  if (top != NULL) {
+    top = reverceStack(top);
+    for (tmp = top; tmp != NULL; tmp = tmp->next) {
+      res = Push(res, tmp->value, tmp->pr, tmp->t);
+    }
+    free(tmp);
+  }
+top = reverceStack(top);
+return res;
+
+}

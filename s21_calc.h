@@ -2,6 +2,20 @@
 #define SRC_S21_CALC_H_
 
 #include "stack.h"
+
+typedef struct credit
+{
+    double month_pay;
+    double overpayment;
+    double total;
+} Credit_output;
+
+ typedef enum
+ {
+    annuent,
+    diff
+ } Credit_type;
+
 // VALIDATION
 void input(char str[]);
 int validation(char str[]);
@@ -26,5 +40,5 @@ Stack* parcer(char* str);
 Stack* RePolish(Stack* Input);
 Stack* Stack_with_X(Stack* Ready, double x);
 double Calc(Stack* Ready);
-
+Credit_output credit(double credit_sum, double time, double procent, Credit_type ct);
 #endif  // SRC_S21_CALC_H_

@@ -46,6 +46,6 @@ Stack Top(Stack* top);
 void Show(Stack* top);
 int CountStack(Stack* top);
 Stack* reverceStack(Stack* top);
-
+Stack* CopyStack(Stack* top);
 
 #endif  // SRC_STACK_H_

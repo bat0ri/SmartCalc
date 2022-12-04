@@ -1,5 +1,4 @@
 #include <math.h>
-
 #include "s21_calc.h"
 
 Stack* Stack_with_X(Stack* Ready, double x) {
@@ -48,6 +47,14 @@ double Calc(Stack* Ready) {
         } else {
           b = 0;
         }
+      } else if (Ready->t == s21_mod) {
+        double tmp = Support->value;
+        Support = Pop(Support);
+        if (tmp != 0) {
+          Support->value = fmod(Support->value, tmp);
+        } else {
+          b = 0;
+        }
       }
     } else if (Ready->pr == 3) {
       double tmp1 = Support->value;
@@ -81,25 +88,22 @@ double Calc(Stack* Ready) {
   return result;
 }
 
-// int main(void) {
-//   char str[256];
+//int main(void) {
 
-//   input(str);
-//   if (validation(str) == 1) {
-//     printf("SUCCESSFULL\n");
-//   } else {
-//     printf("TY LOH =)\n");
-//   }
+//  char str[256];
+//  input(str);
 
-//   Stack* Input = NULL;
-//   Input = parcer(str);
-//   Input = reverceStack(Input);
+//  if (validation(str) == 1) {
+//    Stack* Input = NULL;
+//    Input = parcer(str);
+//    Input = reverceStack(Input);
+    
+//    Stack* Ready = RePolish(Input);
+//    double result = Calc(Ready);
 
-//   Stack* Ready = RePolish(Input);
- 
-//   Ready = Stack_with_X(Ready, x);
-
-//   double result = Calc(Ready);
-
-//   printf("%lf\n", result);
-// }
+//    printf("%lf\n", result);
+//  } else {
+//    printf("VALID_ERROR\n");
+//  }
+  
+//}
