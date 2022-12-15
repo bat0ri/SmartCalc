@@ -5,7 +5,7 @@
 
 typedef struct credit
 {
-    double month_pay;
+    double* month_pay;
     double overpayment;
     double total;
 } Credit_output;

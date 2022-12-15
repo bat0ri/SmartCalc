@@ -32,7 +32,13 @@ FORMS += \
     dialog.ui \
     mainwindow.ui
 
+TARGET = SmartCalc
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+
+#RC_ICONS = myappico.ico
+RC_FILE = untitled_resource.rc

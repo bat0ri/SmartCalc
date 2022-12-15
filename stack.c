@@ -78,7 +78,7 @@ Stack* reverceStack(Stack* top) {
 Stack* CopyStack(Stack* top) {
 
   Stack* tmp = NULL;
-  Stack* res;
+  Stack* res = NULL;
 
   if (top != NULL) {
     top = reverceStack(top);
