@@ -1,5 +1,5 @@
 #include "../headers/dialog.hpp"
-#include "ui_dialog.h"
+#include "../../build/ui_dialog.h"
 #include <algorithm>
 
 Dialog::Dialog(QWidget *parent) :

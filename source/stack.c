@@ -15,17 +15,6 @@ Stack* Push(Stack* top, double value, int pr, Type t) {
   top->next = tmp;
   return top;
 }
-// Вывод стека
-void Show(Stack* top) {
-  Stack* tmp;
-  if (top != NULL) {
-    for (tmp = top; tmp != NULL; tmp = tmp->next) {
-      printf("\n\t---st---\n");
-      printf("val = %lf\npr = %d\ntype = %d\t", tmp->value, tmp->pr, tmp->t);
-    }
-    free(tmp);
-  }
-}
 // Кол-во стека
 int CountStack(Stack* top) {
   int b = 0;
@@ -58,12 +47,6 @@ Stack* Destroy(Stack* top) {
   }
   return top;
 }
-// Возвращает значение верхушки
-Stack Top(Stack* top) {
-  Stack tmp;
-  tmp = *(top);
-  return tmp;
-}
 // Переворачивает стек
 Stack* reverceStack(Stack* top) {
   Stack* tmp = NULL;
@@ -73,21 +56,4 @@ Stack* reverceStack(Stack* top) {
     top = Pop(top);
   }
   return tmp;
-}
-
-Stack* CopyStack(Stack* top) {
-
-  Stack* tmp = NULL;
-  Stack* res = NULL;
-
-  if (top != NULL) {
-    top = reverceStack(top);
-    for (tmp = top; tmp != NULL; tmp = tmp->next) {
-      res = Push(res, tmp->value, tmp->pr, tmp->t);
-    }
-    free(tmp);
-  }
-top = reverceStack(top);
-return res;
-
 }

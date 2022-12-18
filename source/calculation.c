@@ -87,23 +87,3 @@ double Calc(Stack* Ready) {
   Destroy(Support);
   return result;
 }
-
-//int main(void) {
-
-//  char str[256];
-//  input(str);
-
-//  if (validation(str) == 1) {
-//    Stack* Input = NULL;
-//    Input = parcer(str);
-//    Input = reverceStack(Input);
-    
-//    Stack* Ready = RePolish(Input);
-//    double result = Calc(Ready);
-
-//    printf("%lf\n", result);
-//  } else {
-//    printf("VALID_ERROR\n");
-//  }
-  
-//}

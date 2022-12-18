@@ -20,10 +20,10 @@ Stack* parcer(char* str) {
       free(tmp);
       tmp = NULL;
     } else if (str[i] == '+') {
-      if (st->pr == -1 || i == 0) st = Push(st, 0, 0, s21_number);
+      if (i == 0 || st->pr == -1 || st->pr == 1) {st = Push(st, 0, 0, s21_number);}
       st = Push(st, 0, 1, s21_plus);
     } else if (str[i] == '-') {
-      if (st->pr == -1 || i == 0) st = Push(st, 0, 0, s21_number);
+      if (i == 0 || st->pr == -1 || st->pr == 1 ) {st = Push(st, 0, 0, s21_number);}
       st = Push(st, 0, 1, s21_minus);
     } else if (str[i] == '*') {
       st = Push(st, 0, 2, s21_mult);

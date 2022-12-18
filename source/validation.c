@@ -1,14 +1,5 @@
 #include "../headers/s21_calc.h"
 
-void input(char *str) {
-  char x;
-  int i = 0;
-  while (scanf("%c", &x) == 1 && x != '=' && x != '\n' && i < 256) {
-    str[i] = (char)x;
-    i++;
-  }
-}
-
 int IsCount(char c) {
   int b = 1;
   if (c <= '9' && c >= '0')
@@ -121,7 +112,7 @@ int validation(char str[]) {
   for (int i = 0; i < n && b != 0; i++) {
     if (IsCount(str[i]) == 1) {
       if (IsCount(pred) == 1 || IsOper(pred) > 0 || pred == '(' ||
-          pred == ' ') {
+          pred == ' ' || pred == '^') {
         pred = str[i];
       } else {
         b = 0;
@@ -190,15 +181,16 @@ int validation(char str[]) {
         i += 4;
       } else
         b = 0;
-    } else if (IsMod(&str[i]) == 1 && n - i > 3) {
+    } else if (IsMod(&str[i]) == 1 && n - i > 3 && (IsCount(pred)==1 || pred == ')')) {
       pred = '/';
       i += 2;
-    } else if (str[i] == '^') {
+    } else if (str[i] == '^' && IsOper(pred) !=2 && pred != '(' && pred !=' ') {
       pred = '^';
+      if (t == 1) t = 0;
     } else
       b = 0;
-    //  printf("\tpred: %c\t str[%d]: %c\t  t: %d\tsk: %d\t b:%d\n", pred, i,
-    //  str[i], t, sk, b);
+    // printf("\tpred: %c\t str[%d]: %c\t  t: %d\tsk: %d\t b:%d\n", pred, i,
+    // str[i], t, sk, b);
   }
   if (sk > 0) b = 0;
   if (IsOper(str[n - 1]) > 0) b = 0;

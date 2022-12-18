@@ -1,5 +1,6 @@
 #include "../headers/mainwindow.h"
-#include "../ui_mainwindow.h"
+#include "../../build/ui_mainwindow.h"
+#include <QtGlobal>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -164,7 +165,7 @@ void MainWindow::on_calc_credit_clicked()
         double s = credit_sum;
         for(int row = 0; row < table->rowCount(); row++) {
             s *= (1+procent/100);
-            s = round(s*100)/100;
+            s = qRound(s*100)/100;
             index = table->index(row, 0);
             table->setData(index, s);
             s -= res.month_pay[row];
