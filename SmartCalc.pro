@@ -11,26 +11,26 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    ./source/credit_calc.c \
-    ./source/dialog.cpp \
-    ./source/main.cpp \
-    ./source/mainwindow.cpp \
-    ./qcustomplot/qcustomplot.cpp \
-    ./source/validation.c \
-    ./source/RPN.c \
-    ./source/parcer.c \
-    ./source/calculation.c \
-    ./source/stack.c
+    ../SmartCalc/source/credit_calc.c \
+    ../SmartCalc/source/dialog.cpp \
+    ../SmartCalc/source/main.cpp \
+    ../SmartCalc/source/mainwindow.cpp \
+    ../SmartCalc/qcustomplot/qcustomplot.cpp \
+    ../SmartCalc/source/validation.c \
+    ../SmartCalc/source/RPN.c \
+    ../SmartCalc/source/parcer.c \
+    ../SmartCalc/source/calculation.c \
+    ../SmartCalc/source/stack.c
 
 HEADERS += \
-    ./headers/dialog.hpp \
-    ./headers/mainwindow.h \
-    ./qcustomplot/qcustomplot.h \
-    ./headers/s21_calc.h \
-    ./headers/stack.h
+    ../SmartCalc/headers/dialog.hpp \
+    ../SmartCalc/headers/mainwindow.h \
+    ../SmartCalc/qcustomplot/qcustomplot.h \
+    ../SmartCalc/headers/s21_calc.h \
+    ../SmartCalc/headers/stack.h
 FORMS += \
-    ./UI/dialog.ui \
-    ./UI/mainwindow.ui
+    ../SmartCalc/ui/dialog.ui \
+    ../SmartCalc/ui/mainwindow.ui
 
 TARGET = SmartCalc
 
