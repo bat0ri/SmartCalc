@@ -42,10 +42,7 @@ typedef struct stack {
 Stack* Push(Stack* top, double value, int pr, Type t);
 Stack* Pop(Stack* head);
 Stack* Destroy(Stack* top);
-Stack Top(Stack* top);
-void Show(Stack* top);
 int CountStack(Stack* top);
 Stack* reverceStack(Stack* top);
-Stack* CopyStack(Stack* top);
 
 #endif  // SRC_STACK_H_
