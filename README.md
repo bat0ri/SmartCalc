@@ -11,7 +11,7 @@
 
 ### or for tests
 
-``` make test
+make test
 
-``` make gcov_test
+make gcov_test
 
