@@ -7,12 +7,15 @@
 
 ### install
 
-``` make install ```
+```
+make install
+```
 
 ### or for tests
 
 ```
 make test
-
+```
+```
 make gcov_test
 ```
