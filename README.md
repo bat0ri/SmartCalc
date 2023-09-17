@@ -6,8 +6,12 @@
 - кредиты и депозиты
 
 #### install
+
 ``` make install ```
+
 or for tests
+
 ``` make test ```
+
 ``` make gcov_test ```
 
