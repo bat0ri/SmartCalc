@@ -1,17 +1,17 @@
 # SmartCalc
-#### s21
+## s21
 Калькулятор
 - Qt5 GUI
 - qcustomplots(умеет рисовать графики)
 - кредиты и депозиты
 
-#### install
+### install
 
 ``` make install ```
 
-or for tests
+### or for tests
 
-``` make test ```
+``` make test
 
-``` make gcov_test ```
+``` make gcov_test
 
