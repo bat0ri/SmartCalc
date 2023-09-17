@@ -11,7 +11,8 @@
 
 ### or for tests
 
+```
 make test
 
 make gcov_test
-
+```
